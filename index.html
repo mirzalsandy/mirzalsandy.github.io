@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mirzal Muhamad Hari Sandy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF;--ink:#1C1C1C;--muted:#6B6B6B;--rule:#D9D9D9;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#161616;--ink:#EDEDED;--muted:#A0A0A0;--rule:#333333;}
+}
+:root[data-theme="dark"]{--bg:#161616;--ink:#EDEDED;--muted:#A0A0A0;--rule:#333333;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.2rem;line-height:1.7}
+main{max-width:40rem;margin:0 auto;padding:2rem 1.5rem 3rem}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;align-items:center;padding-bottom:1.25rem}
+nav a,button{font:inherit;color:var(--ink)}
+nav a{text-decoration:none;border-bottom:1px solid transparent}
+nav a:hover{border-bottom-color:var(--ink)}
+nav .spacer{flex:1}
+button{background:none;border:1px solid var(--rule);padding:.1rem .8rem;cursor:pointer;border-radius:0}
+button:hover{border-color:var(--ink)}
+button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+header{padding:3rem 0 2.5rem;border-bottom:1px solid var(--rule)}
+h1{font-size:clamp(2.2rem,8vw,3.2rem);font-weight:500;line-height:1.15;margin:0 0 .75rem;letter-spacing:-.01em}
+h2{font-size:1.5rem;font-weight:400;font-style:italic;margin:0 0 1.25rem}
+.tag{color:var(--muted);margin:0;font-style:italic}
+section{padding:2.5rem 0;border-bottom:1px solid var(--rule)}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}
+.item{display:grid;grid-template-columns:8rem 1fr;gap:.1rem 1rem;margin-bottom:1.5rem}
+.item[hidden]{display:none}
+.item:last-child{margin-bottom:0}
+.when{color:var(--muted);font-size:1.05rem}
+.item h3{font-size:1.2rem;font-weight:500;margin:0}
+.item p{grid-column:2;color:var(--muted);font-size:1.05rem;margin:0}
+.item div{grid-column:2}
+dl{display:grid;grid-template-columns:7rem 1fr;gap:.4rem 1rem;margin:0}
+dt{color:var(--muted)}
+dd{margin:0;overflow-wrap:anywhere}
+dd a{color:var(--ink)}
+.copy{margin-left:.5rem;font-size:.95rem}
+.status{color:var(--muted);font-size:1rem;margin-left:.5rem}
+footer{padding-top:2rem;color:var(--muted);font-size:1rem}
+@media (max-width:30rem){.item{grid-template-columns:1fr}.item div,.item p{grid-column:1}dl{grid-template-columns:1fr;gap:0}dd{margin-bottom:.6rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Navigasi halaman">
+    <a href="#tentang" data-nav>Tentang</a>
+    <a href="#pengalaman" data-nav>Pengalaman</a>
+    <a href="#proyek" data-nav>Proyek</a>
+    <a href="#kontak" data-nav>Kontak</a>
+    <span class="spacer"></span>
+    <button id="theme" type="button" aria-label="Ganti tema terang atau gelap">Ganti tema</button>
+  </nav>
+
+  <header>
+    <h1>Mirzal Muhamad Hari Sandy</h1>
+    <p class="tag">Mahasiswa D-4 Teknologi Rekayasa Elektro, Sekolah Vokasi, Universitas Gadjah Mada</p>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang saya</h2>
+    <p>Saya berasal dari Prabumulih, Sumatera Selatan, dan sekarang tinggal di Yogyakarta. Minat utama saya adalah Electric Power System dan energi terbarukan.</p>
+    <p>Saat ini saya berfokus pada akademik. Ke depan, saya ingin lebih banyak mengikuti lomba dan mengerjakan proyek.</p>
+    <p>Di luar kuliah, saya aktif di UKM Marching Band dan tertarik pada fotografi dan desain.</p>
+    <p>Setelah lulus, saya ingin melanjutkan S2 Electrical Engineering di Jepang, dengan fokus pada Power System dan Renewable Energy.</p>
+  </section>
+
+  <section id="pengalaman">
+    <h2>Pengalaman</h2>
+    <div class="filters" role="group" aria-label="Saring pengalaman">
+      <button type="button" data-f="semua" aria-pressed="true">Semua</button>
+      <button type="button" data-f="edukasi" aria-pressed="false">Edukasi</button>
+      <button type="button" data-f="kompetisi" aria-pressed="false">Kompetisi</button>
+      <button type="button" data-f="organisasi" aria-pressed="false">Organisasi</button>
+      <button type="button" data-f="kerja" aria-pressed="false">Kerja</button>
+    </div>
+
+    <div class="item" data-c="edukasi"><span class="when">2026 – sekarang</span><h3>D-4 Teknologi Rekayasa Elektro</h3><p>Universitas Gadjah Mada, Yogyakarta</p></div>
+    <div class="item" data-c="edukasi"><span class="when">2023 – 2026</span><h3>SMA Negeri 3 Prabumulih</h3><p>Sumatera Selatan</p></div>
+    <div class="item" data-c="kompetisi"><span class="when">2025</span><h3>Juara 1 OSN Bidang Ekonomi</h3><p>Tingkat kota</p></div>
+    <div class="item" data-c="organisasi"><span class="when">2026 – sekarang</span><h3>Anggota Marching Band UGM</h3></div>
+    <div class="item" data-c="organisasi"><span class="when">2026 – sekarang</span><h3>Staf Divisi Materi INTO UGM 2026</h3></div>
+    <div class="item" data-c="organisasi"><span class="when">2026 – sekarang</span><h3>Anggota IKAGAMASS</h3></div>
+    <div class="item" data-c="organisasi"><span class="when">2024 – 2025</span><h3>Ketua Divisi Ketaqwaan OSIS</h3><p>SMA Negeri 3 Prabumulih</p></div>
+    <div class="item" data-c="kerja"><span class="when">Saat ini</span><h3>Belum ada pengalaman kerja formal</h3></div>
+  </section>
+
+  <section id="proyek">
+    <h2>Proyek</h2>
+    <p>Belum ada proyek yang sedang dikerjakan. Fokus saya saat ini adalah akademik; proyek dan lomba akan menyusul.</p>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <dl>
+      <dt>Email</dt><dd><a href="mailto:mirzalmuhammad1@gmail.com">mirzalmuhammad1@gmail.com</a><button id="copy" class="copy" type="button">Salin</button><span id="msg" class="status" role="status"></span></dd>
+      <dt>Instagram</dt><dd><a href="https://instagram.com/mirzaalsandyy" rel="noopener">@mirzaalsandyy</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/mirzal-sandy" rel="noopener">linkedin.com/in/mirzal-sandy</a></dd>
+    </dl>
+  </section>
+
+  <footer>© 2026 Mirzal Muhamad Hari Sandy</footer>
+</main>
+<script>
+(function(){
+  var root=document.documentElement;
+  var dark=window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){var t=root.getAttribute('data-theme');return t?t==='dark':dark.matches}
+  document.getElementById('theme').addEventListener('click',function(){
+    root.setAttribute('data-theme',isDark()?'light':'dark');
+  });
+
+  var btns=document.querySelectorAll('[data-f]'),items=document.querySelectorAll('.item');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=b.getAttribute('data-f');
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      items.forEach(function(i){i.hidden=!(f==='semua'||i.getAttribute('data-c')===f)});
+    });
+  });
+
+  var msg=document.getElementById('msg');
+  document.getElementById('copy').addEventListener('click',function(){
+    var t='mirzalmuhammad1@gmail.com';
+    function ok(){msg.textContent='Tersalin';setTimeout(function(){msg.textContent=''},2000)}
+    function fail(){msg.textContent='Tidak bisa menyalin, salin manual';setTimeout(function(){msg.textContent=''},3000)}
+    try{navigator.clipboard.writeText(t).then(ok,fail)}catch(e){fail()}
+  });
+})();
+</script>
+</body>
+</html>
